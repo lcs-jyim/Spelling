@@ -12,6 +12,7 @@
 		812E8CDC2AEFBCF30067B997 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 812E8CDB2AEFBCF30067B997 /* Preview Assets.xcassets */; };
 		812E8CE42AEFBD150067B997 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812E8CE32AEFBD150067B997 /* QuizView.swift */; };
 		812E8CE82AEFBD410067B997 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812E8CE72AEFBD410067B997 /* Item.swift */; };
+		BF1E44492D9723A100E555E1 /* Outcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1E44482D9723A000E555E1 /* Outcome.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		812E8CDD2AEFBCF30067B997 /* Spelling.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Spelling.entitlements; sourceTree = "<group>"; };
 		812E8CE32AEFBD150067B997 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 		812E8CE72AEFBD410067B997 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		BF1E44482D9723A000E555E1 /* Outcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Outcome.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				812E8CE72AEFBD410067B997 /* Item.swift */,
+				BF1E44482D9723A000E555E1 /* Outcome.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF1E44492D9723A100E555E1 /* Outcome.swift in Sources */,
 				812E8CD52AEFBCF30067B997 /* SpellingApp.swift in Sources */,
 				812E8CE82AEFBD410067B997 /* Item.swift in Sources */,
 				812E8CE42AEFBD150067B997 /* QuizView.swift in Sources */,
@@ -295,7 +299,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Spelling/Preview Content\"";
-				DEVELOPMENT_TEAM = C7DL9Y9A7R;
+				DEVELOPMENT_TEAM = 4UG443984D;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -322,7 +326,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Spelling/Preview Content\"";
-				DEVELOPMENT_TEAM = C7DL9Y9A7R;
+				DEVELOPMENT_TEAM = 4UG443984D;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
