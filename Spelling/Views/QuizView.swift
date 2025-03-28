@@ -17,6 +17,8 @@ struct QuizView: View {
     
     //What aws the outcome of a user making a guess?
     @State var currentOutcome: Outcome = .undetermined
+    
+    @State var history:[Result] = [] // empty Array
     // MARK: Computed properties
     var body: some View {
         
@@ -26,12 +28,21 @@ struct QuizView: View {
                 .scaledToFit()
             HStack{
                 TextField("Enter the name of the item", text: $userGuess)
+                
+                Text(currentOutcome.rawValue)
+            }
+            HStack{
                 Button {
                     checkGuess()
+                    
                 }label:{
                     Text("Submit")
                 }
-                Text(currentOutcome.rawValue)
+                Button {
+                    newWord()
+                }label:{
+                    Text("New word")
+                }
             }
         }
     }
@@ -44,6 +55,20 @@ struct QuizView: View {
                 print("Incorrect")
             }
         }
+    func newWord(){
+        //Save the prior result
+        history.insert(
+            Result(
+                item: currentItem,
+                guessProvided: userGuess,
+                outcome: currentOutcome
+            ), at: 0
+        )
+        //Picks a new word
+        currentItem = itemsToSpell.randomElement()!
+        userGuess = ""
+        currentOutcome = .undetermined
+    }
     }
     
     #Preview {
