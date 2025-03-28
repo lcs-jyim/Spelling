@@ -21,30 +21,48 @@ struct QuizView: View {
     @State var history:[Result] = [] // empty Array
     // MARK: Computed properties
     var body: some View {
-        
-        VStack {
-            Image(currentItem.imageName)
-                .resizable()
-                .scaledToFit()
-            HStack{
-                TextField("Enter the name of the item", text: $userGuess)
-                
-                Text(currentOutcome.rawValue)
-            }
-            HStack{
-                Button {
-                    checkGuess()
+        HStack{
+            // Left side
+            VStack {
+                Image(currentItem.imageName)
+                    .resizable()
+                    .scaledToFit()
+                HStack{
+                    TextField("Enter the name of the item", text: $userGuess)
                     
-                }label:{
-                    Text("Submit")
+                    Text(currentOutcome.rawValue)
                 }
-                Button {
-                    newWord()
-                }label:{
-                    Text("New word")
+                HStack{
+                    Button {
+                        checkGuess()
+                        
+                    }label:{
+                        Text("Submit")
+                    }
+                    Button {
+                        newWord()
+                    }label:{
+                        Text("New word")
+                    }
+                }
+            }
+            
+            // Right side
+            List(history){ currentResult in
+                HStack{
+                Image(currentResult.item.imageName)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width:50)
+                                    Text(currentResult.guessProvided)
+                    
+                    Spacer()
+                    
+                    Text(currentResult.outcome.rawValue)
                 }
             }
         }
+       
     }
         func checkGuess() {
             if userGuess == currentItem.word{
